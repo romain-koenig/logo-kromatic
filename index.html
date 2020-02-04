@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kromatic pure CSS Logo</title>
+</head>
+<style>
+    :root {
+        --light-blue: #55c4f9;
+        --dark-blue: #295ea7;
+
+        --light-red: #f20085;
+        --dark-red: #9a115d;
+
+        --light-yellow: #f1aa1a;
+        --dark-yellow: #e24726;
+
+        --light-green: #56c740;
+        --dark-green: #30823e;
+
+        --base-width: 100px;
+        --base-height: calc(1.25 * var(--base-width));
+
+        --default-spacer:30px;
+
+    }
+
+
+    .light-blue {
+        position: absolute;
+        background: var(--light-blue);
+        height: var(--base-height);
+        width: var(--base-width);
+
+        left: var(--default-spacer);
+        top: var(--default-spacer);
+    }
+
+    .light-red {
+        position: absolute;
+        background: var(--light-red);
+        height: var(--base-height);
+
+        left: var(--default-spacer);
+        /*(var(--default-spacer) base + var(--base-height))*/
+
+        top: calc(var(--default-spacer) + var(--base-height));
+        width: var(--base-width);
+
+
+    }
+
+    .dark-blue {
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-right: var(--base-width) solid transparent;
+        border-bottom: var(--base-height) solid var(--dark-blue);
+        left: var(--default-spacer);
+        top: var(--default-spacer);
+    }
+
+    .dark-red {
+
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: calc(var(--default-spacer) + var(--base-height));
+        left: var(--default-spacer);
+        border-bottom: var(--base-height) solid var(--dark-red);
+        border-left: var(--base-width) solid transparent;
+    }
+
+    .dark-yellow {
+
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: var(--default-spacer);
+        left: calc(var(--default-spacer) + var(--base-width));
+        border-bottom: var(--base-height) solid var(--dark-yellow);
+        border-left: var(--base-width) solid transparent;
+    }
+
+
+    .dark-green {
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-right: var(--base-width) solid transparent;
+        border-bottom: var(--base-height) solid var(--dark-green);
+
+        top: calc(var(--default-spacer) + var(--base-height));
+        left: calc(2*var(--base-width) + var(--default-spacer));
+    }
+
+    .light-yellow {
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-top: var(--base-height) solid var(--light-yellow);
+        border-right: var(--base-width) solid transparent;
+        top: var(--default-spacer);
+        left: calc(2*var(--base-width) + var(--default-spacer));
+
+    }
+
+    .light-green {
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-top: var(--base-height) solid var(--light-green);
+        border-left: var(--base-width) solid transparent;
+
+        top: calc(var(--default-spacer) + var(--base-height));
+        left: calc(var(--default-spacer) + var(--base-width));
+
+    }
+</style>
+
+<body>
+    <div class="light-blue"></div>
+    <div class="light-red"></div>
+    <div class="dark-blue"></div>
+    <div class="dark-red"></div>
+    <div class="dark-yellow"></div>
+    <div class="dark-green"></div>
+    <div class="light-yellow"></div>
+    <div class="light-green"></div>
+
+</body>
+
+</html>
